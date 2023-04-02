@@ -34,6 +34,7 @@
   </ion-grid>
 
   <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
+    <app-todo *ngFor="let todo of todos$" [todo]="todo" [delete]="this.delete" [update] = "this.update">
+    </app-todo>
   </ion-list>
 </ion-content>

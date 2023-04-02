@@ -52,7 +52,7 @@ export class TodoService{
         return Http.get(options);
     }
 
-    delete(id: number) : Promise<HttpResponse> {
+    delete(id?: number) : Promise<HttpResponse> {
         const options ={
             url: `${this.resourceURL}/${id}`,
             headers: { 'Content-Type': 'application/json'}
